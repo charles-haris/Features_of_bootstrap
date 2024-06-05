@@ -11,13 +11,13 @@
     <!-- Navbar start-->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container">
+          <a class="navbar-brand" href="#">Ready <span class="text-danger">Hotel</span></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -39,10 +39,89 @@
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+           <div class="auth">
+            <!-- Sign In Modal start-->
+            <!-- Button trigger modal -->
+
+            <!-- for the button to work by calling the modal 
+            we must :
+            make sure that the property data-bs-target receives #id_name_modal (in the button tag), 
+            the modal should have an id_name
+            -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signup_modal">
+            Sign In  </button>
+  
+            <!-- Modal -->
+            <div class="modal fade" id="signup_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <form action="" class="form">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                          </div>
+                          <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                          </div>
+                          <button type="button" class="btn btn-primary mt-3">Sign In</button>
+
+                    </form>
+                 
+                </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Sign In Modal end-->
+
+            <!-- Sign Up Modal start-->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signin_modal">
+                Sign Up  </button>
+      
+                <!-- Modal -->
+                <div class="modal fade" id="signin_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Create an Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form action="" class="form">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Full Name">
+                                <label for="floatingInput">Full Name</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                              </div>
+
+                              <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword"> Confirm Password</label>
+                              </div>
+                              <button type="button" class="btn btn-primary mt-3">Sign Up</button>
+    
+                        </form>
+                     
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sign Up Modal end-->
+
+           </div>
           </div>
         </div>
       </nav>
